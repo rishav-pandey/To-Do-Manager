@@ -6,7 +6,7 @@
     <p>Your To-Do list ({{itemCount}}) </p>
   </div>
 </div>
-<div class="container color-light">
+<div class="container color-light" [@todoList]="todoList.length">
   <div class="col">
     <p class="sm">Use this form below to add a new to-do list. What do you want to accomplish today?</p>
 
@@ -23,7 +23,8 @@
     </form>
   </div>
   <div class="col">
-    <p class="life-container" *ngFor="let list of todoList">
+    <p class="sm">Click on the task to delete it.</p>
+    <p class="life-container" *ngFor="let list of todoList; let i = index" (click)="removeItem(i)">
       {{list}}
     </p>
   </div>
