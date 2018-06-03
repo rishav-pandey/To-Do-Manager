@@ -20,19 +20,28 @@ input.txt {
 }
 input.btn {
   border: 0;
+  font-weight: bold;
+  color: #003A61;
   display:block;
   padding:1em 3em;
   background:#A5F883;
-  color:#003A61;
   margin-bottom:1em;
   cursor:pointer;
   border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 17px -3px #afa;
+  -moz-box-shadow: 2px 2px 17px -3px #afa;
+  box-shadow: 3px 3px 17px -5px #afa;
 }
 .life-container {
   background:#3FA0E1;
   padding:.5em;
   font-weight:bold;
   cursor:pointer;
+}
+
+input {
+  border-radius: 5px;
+  padding: 5px;
 }
 
 

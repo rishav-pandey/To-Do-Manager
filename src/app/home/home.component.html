@@ -1,30 +1,30 @@
 <div class="container color-dark">
   <div class="col">
-    <p>Add a bucket list item</p>
+    <p>Add a To-Do list item</p>
   </div>
   <div class="col">
-    <p>Your bucket list</p>
+    <p>Your To-Do list ({{itemCount}}) </p>
   </div>
 </div>
 <div class="container color-light">
   <div class="col">
-    <p class="sm">Use this form below to add a new bucket list goal. What do you want to accomplish in your life?</p>
+    <p class="sm">Use this form below to add a new to-do list. What do you want to accomplish today?</p>
 
     <form>
-      <input type="text" class="txt" name="item" placeholder="Life goal..">
+      <input type="text" class="txt" name="item" placeholder="Enter your today's task.." [(ngModel)]="todoItem" >
       <div id="submit-form">
         <div class="submit-btn">
-          <input type="submit" class="btn" value="Add Item">
+          <input type="submit" class="btn" value={{addBtnText}} (click)="addItem();" >
         </div>
         <div class="submit-btn pull-right">
-          <input type="submit" class="btn" value="Add Item">
+          <input type="submit" class="btn" value={{saveBtnText}} (click)="saveItem();" >
         </div>
       </div>
     </form>
   </div>
   <div class="col">
-    <p class="life-container">
-      I want to climb a mountain
+    <p class="life-container" *ngFor="let list of todoList">
+      {{list}}
     </p>
   </div>
 </div>
