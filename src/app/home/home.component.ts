@@ -36,6 +36,7 @@ export class HomeComponent implements OnInit {
   itemCount: number;
   addBtnText: string = "Add a Task";
   saveBtnText: string = "Save Your's Task";
+  itemDetail: string = "";
 
   todoItem: string;
   todoList = [];
@@ -47,13 +48,22 @@ export class HomeComponent implements OnInit {
   }
 
   addItem () {
-    if (this.todoItem === "" ) {
-      alert("First Enter Today's Task To Proceed Further!");
-    }
-    else {
+    if (this.todoItem) {
       this.todoList.push(this.todoItem);
       this.todoItem = '';
       this.itemCount = this.todoList.length;
+    }
+    else {
+      alert("First Enter Today's Task To Proceed Further!");
+    }
+  }
+
+  saveItem () {
+    if (this.todoList != undefined && this.todoList.length > 0) {
+
+    }
+    else {
+      alert("First Enter Today's Task To Proceed Further!");
     }
   }
 
